@@ -1,22 +1,10 @@
 # countdown
 
-> TODO
+> Display time in countdown style
 
-## Unit tests
+## DEMO
 
-Use Jasmine to setup unit test:
-
-```
-$ npm test
-```
-
-## Code coverage
-
-Use Istanbul to get code coverage ratio:
-
-```
-$ npm run coverage
-```
+https://piecioshka.github.io/countdown/
 
 ## License
 
