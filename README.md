@@ -28,9 +28,11 @@ You can pass into URL hash as formatted time, for example:
 ### Print screens
 
 Start time:
+
 ![](images/start-time.png)
 
 End of time:
+
 ![](images/end-of-time.png)
 
 ## License
