@@ -25,7 +25,7 @@ You can pass into URL hash as formatted time, for example:
 
 **Default** is one minute.
 
-### Print screens
+## Print screens
 
 Start time:
 
