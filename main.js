@@ -13,7 +13,7 @@ function playSound(src) {
 }
 
 function playAlarm() {
-    playSound('./audio/Alarm_clock.mp3');
+    playSound('./audio/Alarm_Clock.mp3');
 }
 
 function displayTime(seconds) {
