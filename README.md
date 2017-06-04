@@ -2,11 +2,11 @@
 
 > ⏰ Display time in countdown style
 
-## DEMO
+## Demo
 
-https://piecioshka.github.io/countdown/
+Click: https://piecioshka.github.io/countdown/
 
-## Features
+## Features 💥
 
 * Count down to passed time
 * You can change time during counting down by update hash and press ENTER
@@ -17,7 +17,7 @@ https://piecioshka.github.io/countdown/
 
 ## How to set concrete time to countdown?
 
-You can pass into hash as formatted time ex: 
+You can pass into URL hash as formatted time, for example: 
 
 * https://piecioshka.github.io/countdown/#10:00
 * https://piecioshka.github.io/countdown/#03:14
@@ -25,7 +25,13 @@ You can pass into hash as formatted time ex:
 
 **Default** is one minute.
 
-![](./demo.png)
+### Print screens
+
+Start time:
+![](images/start-time.png)
+
+End of time:
+![](images/end-of-time.png)
 
 ## License
 
