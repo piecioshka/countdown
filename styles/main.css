@@ -7,13 +7,16 @@ html, body {
     justify-content: center;
     align-items: center;
     transition: 1s all;
+    overflow: hidden;
 }
 
 h1 {
-    font-family: 'Wallpoet', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 200px;
     margin: 0;
+    user-select: none;
+    cursor: move;
 }
 
 .warning-text {
@@ -30,4 +33,8 @@ h1 {
     30%, 60% {
         opacity: 0;
     }
+}
+
+.github-ribbon {
+    user-select: none;
 }

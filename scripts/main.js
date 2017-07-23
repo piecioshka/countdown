@@ -57,6 +57,12 @@ function readLimitTime() {
     return ONE_SECOND * (seconds + minutes * 60);
 }
 
+function applyMovingTime() {
+    MoveMaster({
+        target: document.querySelector('h1')
+    });
+}
+
 function setup() {
     $place = document.querySelector('h1');
     limitTime = readLimitTime();
@@ -70,6 +76,8 @@ function setup() {
             finishCounting();
         }
     }, ONE_SECOND);
+
+    applyMovingTime();
 }
 
 window.addEventListener('DOMContentLoaded', setup);

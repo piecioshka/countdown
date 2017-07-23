@@ -14,6 +14,7 @@ Click: https://piecioshka.github.io/countdown/
 * Set red theme when time is end
 * Play alarm clock when time is end
 * Properly works on all modern browsers
+* Use [MoveMaster](https://github.com/piecioshka/move-master) to make time draggable
 
 ## How to set concrete time to countdown?
 
