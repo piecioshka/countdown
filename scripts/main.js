@@ -1,84 +1,36 @@
-const ONE_SECOND = 1000;
-const ONE_MINUTE = 60 * ONE_SECOND;
+(function (global) {
+    'use strict';
 
-let currentTime = 0;
-let limitTime = null;
-let $place = null;
-let clock = null;
+    let Timer = global.Timer;
+    let TimerUI = global.TimerUI;
+    let AudioPlayer = global.AudioPlayer;
+    let MoveMasterConnector = global.MoveMasterConnector;
 
-function playSound(src) {
-    let audio = new Audio(src);
-    audio.load();
-    audio.play();
-}
+    const ALARM_AUDIO_PATH = './audio/Alarm_Clock.mp3';
 
-function playAlarm() {
-    playSound('./audio/Alarm_Clock.mp3');
-}
+    function setup() {
+        let timer = new Timer();
+        let timerUI = new TimerUI(timer);
 
-function displayTime(seconds) {
-    $place.innerText = formatSecond(seconds);
-}
-
-function setWarningStyle() {
-    $place.classList.add('warning-text');
-    document.body.classList.add('warning-background');
-}
-
-function formatSecond(seconds) {
-    let minutesToDisplay = Math.floor(seconds / 60 / ONE_SECOND);
-    let secondsToDisplay = (seconds / ONE_SECOND) % (60);
-    return String(minutesToDisplay).padStart(2, '0')
-        + ':'
-        + String(secondsToDisplay).padStart(2, '0');
-}
-
-function getCurrentTime() {
-    return limitTime - currentTime;
-}
-
-function finishCounting() {
-    clearInterval(clock);
-    setWarningStyle();
-    playAlarm();
-}
-
-function readLimitTime() {
-    let formattedTime = location.hash.slice(1);
-    if (!formattedTime) {
-        return ONE_MINUTE;
-    }
-    let [minutes, seconds] = formattedTime.split(':');
-    minutes = Number(minutes);
-    seconds = Number(seconds);
-    if (Number.isNaN(minutes) || Number.isNaN(seconds)) {
-        return ONE_MINUTE;
-    }
-    return ONE_SECOND * (seconds + minutes * 60);
-}
-
-function applyMovingTime() {
-    MoveMaster({
-        target: document.querySelector('h1')
-    });
-}
-
-function setup() {
-    $place = document.querySelector('h1');
-    limitTime = readLimitTime();
-    displayTime(getCurrentTime());
-
-    clock = setInterval(() => {
-        currentTime += ONE_SECOND;
-        displayTime(getCurrentTime());
-
-        if (currentTime > limitTime - ONE_SECOND) {
-            finishCounting();
+        function displayCurrentTime() {
+            timerUI.displayTime(timer.getCurrentTime());
         }
-    }, ONE_SECOND);
 
-    applyMovingTime();
-}
+        timer.finishedQueue.add(() => {
+            AudioPlayer.playSound(ALARM_AUDIO_PATH);
+            timerUI.setWarningStyle();
+        });
 
-window.addEventListener('DOMContentLoaded', setup);
-window.addEventListener('hashchange', location.reload.bind(location));
+        displayCurrentTime();
+
+        timer.tickQueue.add(() => {
+            displayCurrentTime();
+        });
+
+        MoveMasterConnector.applyMoving(timerUI);
+    }
+
+    global.addEventListener('DOMContentLoaded', setup);
+    global.addEventListener('hashchange', location.reload.bind(location));
+
+})(window);
