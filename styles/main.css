@@ -20,13 +20,12 @@ h1 {
 }
 
 .warning-text {
-    color: red;
-    text-shadow: 0 0 10px black;
+    color: white;
     animation: blink 0.3s 16 0.5s;
 }
 
 .warning-background {
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 1);
 }
 
 @keyframes blink {
