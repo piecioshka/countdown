@@ -1,16 +1,19 @@
 (function (global) {
     'use strict';
 
-    let Timer = global.Timer;
-    let TimerUI = global.TimerUI;
     let AudioPlayer = global.AudioPlayer;
     let MoveMasterConnector = global.MoveMasterConnector;
 
+    let Timer = global.Timer;
+    let TimerComponent = global.TimerComponent;
+
+    let NoteComponent = global.NoteComponent;
+
     const ALARM_AUDIO_PATH = './audio/Alarm_Clock.mp3';
 
-    function setup() {
+    function setupClock() {
         let timer = new Timer();
-        let timerUI = new TimerUI(timer);
+        let timerUI = new TimerComponent(timer);
 
         function displayCurrentTime() {
             timerUI.displayTime(timer.getCurrentTime());
@@ -30,7 +33,23 @@
         MoveMasterConnector.applyMoving(timerUI);
     }
 
-    global.addEventListener('DOMContentLoaded', setup);
+    function setupNotes(evt) {
+        let isPureDocumentClicked = (evt.target === document.body);
+
+        if (!isPureDocumentClicked) {
+            return;
+        }
+
+        let note = new NoteComponent({
+            x: evt.pageX,
+            y: evt.pageY
+        });
+
+        MoveMasterConnector.applyMoving(note);
+    }
+
+    global.addEventListener('DOMContentLoaded', setupClock);
     global.addEventListener('hashchange', location.reload.bind(location));
+    global.addEventListener('dblclick', setupNotes);
 
 })(window);

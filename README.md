@@ -1,6 +1,6 @@
 # countdown
 
-> ⏰ Display time in countdown style
+> ⏰ Countdown time (with optional creating notes)
 
 ## Demo
 
@@ -8,13 +8,16 @@ Click: https://piecioshka.github.io/countdown/
 
 ## Features 💥
 
-* Count down to passed time
-* You can change time during counting down by update hash and press ENTER
-* Use custom web font to display awesome numbers
-* Set red theme when time is end
-* Play alarm clock when time is end
+* Countdown passed time to 00:00
+* You can **change time during countdown** by update hash and press ENTER
+* Use **custom web font** to display awesome numbers
+* **Set red theme** when countdown completed
+* **Play alarm sound** when countdown completed
 * Properly works on all modern browsers
-* Use [MoveMaster](https://github.com/piecioshka/move-master) to make time draggable
+* Use [MoveMaster](https://github.com/piecioshka/move-master) to make elements 
+    draggable
+* Create **movable note** 📒 when make a _double click_ on the lowest layer
+    on document - `document.body`
 
 ## How to set concrete time to countdown?
 

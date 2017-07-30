@@ -40,4 +40,5 @@
     }
 
     global.Timer = Timer;
+
 })(window);

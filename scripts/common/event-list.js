@@ -16,4 +16,5 @@
     }
 
     global.EventList = EventList;
+
 })(window);

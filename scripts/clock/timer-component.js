@@ -1,9 +1,9 @@
 (function (global) {
     'use strict';
 
-    class TimerUI {
+    class TimerComponent {
         constructor() {
-            this.$element = document.querySelector('h1');
+            this.$element = document.querySelector('.clock');
         }
 
         setWarningStyle() {
@@ -20,5 +20,6 @@
         }
     }
 
-    global.TimerUI = TimerUI;
+    global.TimerComponent = TimerComponent;
+
 })(window);

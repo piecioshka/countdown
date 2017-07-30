@@ -11,6 +11,6 @@
 
     global.MoveMasterConnector = {
         applyMoving
-    }
+    };
 
 })(window);

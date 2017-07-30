@@ -1,0 +1,17 @@
+.clock {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 200px;
+    margin: 0;
+    user-select: none;
+    cursor: move;
+}
+
+.warning-text {
+    color: white;
+    animation: blink 0.3s 16 0.5s;
+}
+
+.warning-background {
+    background: rgba(255, 0, 0, 1);
+}
