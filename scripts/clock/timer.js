@@ -12,13 +12,15 @@
             this._limitTime = TimeHashParser.readLimitTime();
 
             this._clock = setInterval(() => {
+                if (!this._timeIsNull()) {
                 this._makeTick();
                 this.tickQueue.trigger();
+            }
 
-                if (this._isTimeEnded()) {
-                    this._onCountingFinish();
-                }
-            }, ONE_SECOND);
+            if (this._isTimeEnded()) {
+                this._onCountingFinish();
+            }
+        }, ONE_SECOND);
         }
 
         _makeTick() {
@@ -34,6 +36,12 @@
             this.finishedQueue.trigger();
         }
 
+        _timeIsNull() {
+            if (this._limitTime === 0) {
+                return true;
+            }
+        }
+
         getCurrentTime() {
             return this._limitTime - this._currentTime;
         }
@@ -42,3 +50,4 @@
     global.Timer = Timer;
 
 })(window);
+
