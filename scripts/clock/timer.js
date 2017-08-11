@@ -10,17 +10,18 @@
 
             this._currentTime = 0;
             this._limitTime = TimeHashParser.readLimitTime();
+            if (this._limitTime === 0) {
+                console.warn('Time cannot be 00:00');
+            } else {
+                this._clock = setInterval(() => {
+                    this._makeTick();
+                    this.tickQueue.trigger();
 
-            this._clock = setInterval(() => {
-                if (!this._timeIsNull()) {
-                this._makeTick();
-                this.tickQueue.trigger();
+                    if (this._isTimeEnded()) {
+                        this._onCountingFinish();
+                    }
+                }, ONE_SECOND);
             }
-
-            if (this._isTimeEnded()) {
-                this._onCountingFinish();
-            }
-        }, ONE_SECOND);
         }
 
         _makeTick() {
@@ -31,15 +32,10 @@
             return this._currentTime > this._limitTime - ONE_SECOND;
         }
 
+
         _onCountingFinish() {
             clearInterval(this._clock);
             this.finishedQueue.trigger();
-        }
-
-        _timeIsNull() {
-            if (this._limitTime === 0) {
-                return true;
-            }
         }
 
         getCurrentTime() {
@@ -50,4 +46,3 @@
     global.Timer = Timer;
 
 })(window);
-
