@@ -4,13 +4,13 @@
 
 # countdown
 
-> ⏰ Countdown mechanism + creating notes after `double click`
+⏰ Countdown mechanism + creating notes after `double click`
 
-## Demo
+## Demo 🎉
 
-Click: https://piecioshka.github.io/countdown/
+<https://piecioshka.github.io/countdown/>
 
-## Features 💥
+## Features
 
 * :white_check_mark: Countdown passed time to 00:00
 * :white_check_mark: You can **change time during countdown** by update hash
@@ -26,7 +26,7 @@ Click: https://piecioshka.github.io/countdown/
 
 ## How to set time in countdown?
 
-You can pass into URL hash as formatted time, for example: 
+You can pass into URL hash as formatted time, for example:
 
 * https://piecioshka.github.io/countdown/#10:00
 * https://piecioshka.github.io/countdown/#03:14
