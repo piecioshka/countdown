@@ -16,21 +16,21 @@
 * :white_check_mark: You can **change time during countdown** by update hash
     and press ENTER
 * :white_check_mark: Use **custom web font** to display awesome numbers
-* :white_check_mark: **Set red theme** when countdown completed
+* :white_check_mark: **Set the red theme** when countdown completed
 * :white_check_mark: **Play alarm sound** when countdown completed
 * :white_check_mark: Properly works on all modern browsers
 * :white_check_mark: Use [MoveMaster](https://github.com/piecioshka/move-master)
     to make elements draggable
-* :white_check_mark: Create **movable note** 📒 when make a _double click_
-    on the lowest layer on document - `document.body`
+* :white_check_mark: Create **movable note** 📒 when making a _double click_
+    on the lowest layer on a document - `document.body`
 
 ## How to set time in countdown?
 
 You can pass into URL hash as formatted time, for example:
 
-* https://piecioshka.github.io/countdown/#10:00
-* https://piecioshka.github.io/countdown/#03:14
-* https://piecioshka.github.io/countdown/#100:00
+* <https://piecioshka.github.io/countdown/#10:00>
+* <https://piecioshka.github.io/countdown/#03:14>
+* <https://piecioshka.github.io/countdown/#100:00>
 
 _**Default** is one minute._
 
@@ -38,12 +38,12 @@ _**Default** is one minute._
 
 Start time:
 
-![](images/start-time.png)
+![Regular](images/start-time.png)
 
 End of time:
 
-![](images/end-of-time.png)
+![Alarm](images/end-of-time.png)
 
 ## License
 
-[The MIT License](http://piecioshka.mit-license.org) @ 2017
+[The MIT License](http://piecioshka.mit-license.org) @ 2017-2019

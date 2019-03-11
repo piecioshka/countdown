@@ -48,7 +48,7 @@
             $container.style.top = `${y}px`;
 
             let $legend = document.createElement('legend');
-            $legend.innerText = `Note #${NoteComponent.generateIndex()}`;
+            $legend.innerText = `x`;
             $container.appendChild($legend);
 
             let $textarea = document.createElement('textarea');
@@ -56,11 +56,6 @@
             $container.appendChild($textarea);
 
             return $container
-        }
-
-        static generateIndex() {
-            this._index = this._index || 0;
-            return ++this._index;
         }
     }
 
