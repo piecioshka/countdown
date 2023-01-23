@@ -6,7 +6,7 @@
 
 ⏰ Countdown mechanism + creating notes after `double click`
 
-## Demo 🎉
+## Preview 🎉
 
 <https://piecioshka.github.io/countdown/>
 
