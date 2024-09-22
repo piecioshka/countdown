@@ -4,7 +4,7 @@
 
 # countdown
 
-⏰ Countdown mechanism + creating notes after `double click`
+⏰ Countdown mechanism + creating stickers after `double click`
 
 ## Preview 🎉
 
