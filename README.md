@@ -32,13 +32,13 @@ Provide the target time in the URL hash using `SS`, `MM:SS`, or `HH:MM:SS` forma
 
 ## Screenshots
 
-Start time:
+In progress:
 
-![Regular](screenshots/start-time.png)
+![](screenshots/in-progress.png)
 
-End of time:
+Completed:
 
-![Alarm](screenshots/end-of-time.png)
+![](screenshots/finished.png)
 
 ## License
 
