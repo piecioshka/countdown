@@ -12,26 +12,25 @@
 
 ## Features
 
-* ✅ Countdown passed time to 00:00
-* ✅ You can **change time during countdown** by update hash
-    and press ENTER
-* ✅ Use **custom web font** to display awesome numbers
-* ✅ **Set the red theme** when countdown completed
-* ✅ **Play alarm sound** when countdown completed
-* ✅ Properly works on all modern browsers
-* ✅ Use [MoveMaster](https://github.com/piecioshka/move-master)
-    to make elements draggable
-* ✅ Create **movable note** 📒 when making a _double click_
-    on the lowest layer on a document - `document.body`
+- ✅ Counts down to `00:00` with large, legible digits
+- ✅ Lets you adjust the remaining time mid-countdown via the URL hash (press `Enter` to apply)
+- ✅ Ships with a custom web font tailored for the clock face
+- ✅ Automatically switches to a red alert theme when time runs out
+- ✅ Plays an alarm sound the moment the countdown completes
+- ✅ Works in all modern desktop and mobile browsers
+- ✅ Uses [MoveMaster](https://github.com/piecioshka/move-master) for drag-and-drop interactions
+- ✅ Double-click empty space to spawn movable sticky notes 📒 on `document.body`
 
 ## How to set time in countdown?
 
-You can pass into URL hash as formatted time, for example:
+Provide the target time in the URL hash using `SS`, `MM:SS`, or `HH:MM:SS` formats:
 
-* <https://piecioshka.github.io/countdown/> - This will start countdown from `01:00`
-* <https://piecioshka.github.io/countdown/#10:00>
-* <https://piecioshka.github.io/countdown/#03:14>
-* <https://piecioshka.github.io/countdown/#100:00>
+- <https://piecioshka.github.io/countdown/> – default `01:00`
+- <https://piecioshka.github.io/countdown/#45> – 45 seconds
+- <https://piecioshka.github.io/countdown/#10:00> – 10 minutes
+- <https://piecioshka.github.io/countdown/#03:14> – 3 minutes, 14 seconds
+- <https://piecioshka.github.io/countdown/#02:15:00> – 2 hours, 15 minutes
+- <https://piecioshka.github.io/countdown/#100:00> – 1 hour, 40 minutes
 
 ## Print screens
 

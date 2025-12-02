@@ -2,6 +2,7 @@
     "use strict";
 
     const ONE_SECOND = 1000;
+    const ONE_MINUTE = 60 * ONE_SECOND;
 
     class Timer {
         constructor() {
@@ -9,7 +10,8 @@
             this.finishedQueue = new EventList();
 
             this._currentTime = 0;
-            this._limitTime = TimeHashParser.readLimitTime();
+            const time = HashParser.parse() || ONE_MINUTE;
+            this._limitTime = time;
 
             this._clock = setInterval(() => {
                 this._makeTick();

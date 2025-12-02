@@ -9,23 +9,29 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
 <script src="https://unpkg.com/move-master"></script>
-<script src="scripts/clock/seconds-formatter.js"></script>
-<script src="scripts/clock/time-hash-parser.js"></script>
-<script src="scripts/common/move-master-connector.js"></script>
 <script src="scripts/common/audio-player.js"></script>
+<script src="scripts/common/event-list.js"></script>
+<script src="scripts/common/formatter.js"></script>
+<script src="scripts/common/hash-parser.js"></script>
+<script src="scripts/common/move-master-connector.js"></script>
 <script src="scripts/clock/timer.js"></script>
 <script src="scripts/clock/timer-component.js"></script>
-<script src="scripts/common/event-list.js"></script>
 <script src="scripts/note/note-component.js"></script>
 <script src="scripts/main.js"></script>
 
 <div class="hints">
     <ul>
         <li>
-            <strong>Hint:</strong> To create note use <em>double click</em>
+            <strong>Hint:</strong> Set the countdown by editing the URL hash (e.g. <em>#05:00</em>)
         </li>
         <li>
-            <strong>Hint:</strong> To destroy note use <em>double click</em>
+            <strong>Hint:</strong> Supported formats are <em>SS</em>, <em>MM:SS</em>, and <em>HH:MM:SS</em>
+        </li>
+        <li>
+            <strong>Hint:</strong> Press <em>Enter</em> after changing the hash to apply the new time
+        </li>
+        <li>
+            <strong>Hint:</strong> Double-click empty space to create a sticky note, double-click it again to remove
         </li>
     </ul>
 </div>

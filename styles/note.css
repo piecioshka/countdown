@@ -1,13 +1,13 @@
 .note {
     cursor: move;
     position: absolute;
-    border: none;
+    border: 10px solid navajowhite;
     padding: 10px;
 
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     display: block;
-    background: navajowhite;
+    background: white;
 }
 
 .note legend {

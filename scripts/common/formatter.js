@@ -11,7 +11,7 @@
         return `${parsedMinutes}:${parsedSeconds}`;
     }
 
-    global.SecondsFormatter = {
+    global.Formatter = {
         formatSecond,
     };
 })(window);

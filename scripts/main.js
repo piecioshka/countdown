@@ -3,10 +3,8 @@
 
     const AudioPlayer = global.AudioPlayer;
     const MoveMasterConnector = global.MoveMasterConnector;
-
     const Timer = global.Timer;
     const TimerComponent = global.TimerComponent;
-
     const NoteComponent = global.NoteComponent;
 
     const ALARM_AUDIO_PATH = "./audio/Alarm_Clock.mp3";

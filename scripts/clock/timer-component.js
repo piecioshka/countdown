@@ -16,7 +16,7 @@
         }
 
         displayTime(seconds) {
-            this.$element.innerText = SecondsFormatter.formatSecond(seconds);
+            this.$element.innerText = Formatter.formatSecond(seconds);
         }
     }
 
