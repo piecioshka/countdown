@@ -23,22 +23,27 @@
 
         _focusOnTextField() {
             const $textarea = this.$element.querySelector("textarea");
-            $textarea.focus();
+            $textarea?.focus();
         }
 
         _registerCloseButton() {
             const $legend = this.$element.querySelector("legend");
-            $legend.addEventListener("dblclick", this._removeNote);
+            $legend?.addEventListener("click", this._removeNote);
         }
 
         _removeNote() {
-            this._unregisterCloseButton();
-            this.$element.parentNode.removeChild(this.$element);
+            const status = confirm(
+                "Are you sure you want to remove this note?"
+            );
+            if (status) {
+                this.$element.parentNode?.removeChild(this.$element);
+                this._unregisterCloseButton();
+            }
         }
 
         _unregisterCloseButton() {
             const $legend = this.$element.querySelector("legend");
-            $legend.removeEventListener("dblclick", this._removeNote);
+            $legend?.removeEventListener("click", this._removeNote);
         }
 
         static buildDOM(x, y) {
