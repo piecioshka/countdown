@@ -1,14 +1,13 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
     function playSound(src) {
-        let audio = new Audio(src);
+        const audio = new Audio(src);
         audio.load();
         audio.play();
     }
 
     global.AudioPlayer = {
-        playSound
+        playSound,
     };
-
 })(window);

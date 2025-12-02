@@ -1,14 +1,14 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
     class TimerComponent {
         constructor() {
-            this.$element = document.querySelector('.clock');
+            this.$element = document.querySelector(".clock");
         }
 
         setWarningStyle() {
-            this.$element.classList.add('warning-text');
-            document.body.classList.add('warning-background');
+            this.$element.classList.add("warning-text");
+            document.body.classList.add("warning-background");
         }
 
         getDOMElement() {
@@ -21,5 +21,4 @@
     }
 
     global.TimerComponent = TimerComponent;
-
 })(window);

@@ -1,16 +1,15 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
-    let MoveMaster = global.MoveMaster;
+    const MoveMaster = global.MoveMaster;
 
     function applyMoving(movableElement) {
         MoveMaster({
-            target: movableElement.getDOMElement()
+            target: movableElement.getDOMElement(),
         });
     }
 
     global.MoveMasterConnector = {
-        applyMoving
+        applyMoving,
     };
-
 })(window);

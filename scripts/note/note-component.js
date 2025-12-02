@@ -1,5 +1,5 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
     const DEFAULT_NUMBER_OF_COLUMNS = 15;
 
@@ -11,7 +11,7 @@
         }
 
         render() {
-            let $target = document.body;
+            const $target = document.body;
             $target.appendChild(this.$element);
             this._focusOnTextField();
             this._registerCloseButton();
@@ -22,13 +22,13 @@
         }
 
         _focusOnTextField() {
-            let $textarea = this.$element.querySelector('textarea');
+            const $textarea = this.$element.querySelector("textarea");
             $textarea.focus();
         }
 
         _registerCloseButton() {
-            let $legend = this.$element.querySelector('legend');
-            $legend.addEventListener('dblclick', this._removeNote);
+            const $legend = this.$element.querySelector("legend");
+            $legend.addEventListener("dblclick", this._removeNote);
         }
 
         _removeNote() {
@@ -37,28 +37,27 @@
         }
 
         _unregisterCloseButton() {
-            let $legend = this.$element.querySelector('legend');
-            $legend.removeEventListener('dblclick', this._removeNote);
+            const $legend = this.$element.querySelector("legend");
+            $legend.removeEventListener("dblclick", this._removeNote);
         }
 
         static buildDOM(x, y) {
-            let $container = document.createElement('fieldset');
-            $container.classList.add('note');
+            const $container = document.createElement("fieldset");
+            $container.classList.add("note");
             $container.style.left = `${x}px`;
             $container.style.top = `${y}px`;
 
-            let $legend = document.createElement('legend');
+            const $legend = document.createElement("legend");
             $legend.innerText = `x`;
             $container.appendChild($legend);
 
-            let $textarea = document.createElement('textarea');
+            const $textarea = document.createElement("textarea");
             $textarea.cols = DEFAULT_NUMBER_OF_COLUMNS;
             $container.appendChild($textarea);
 
-            return $container
+            return $container;
         }
     }
 
     global.NoteComponent = NoteComponent;
-
 })(window);

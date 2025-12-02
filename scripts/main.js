@@ -1,19 +1,19 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
-    let AudioPlayer = global.AudioPlayer;
-    let MoveMasterConnector = global.MoveMasterConnector;
+    const AudioPlayer = global.AudioPlayer;
+    const MoveMasterConnector = global.MoveMasterConnector;
 
-    let Timer = global.Timer;
-    let TimerComponent = global.TimerComponent;
+    const Timer = global.Timer;
+    const TimerComponent = global.TimerComponent;
 
-    let NoteComponent = global.NoteComponent;
+    const NoteComponent = global.NoteComponent;
 
-    const ALARM_AUDIO_PATH = './audio/Alarm_Clock.mp3';
+    const ALARM_AUDIO_PATH = "./audio/Alarm_Clock.mp3";
 
     function setupClock() {
-        let timer = new Timer();
-        let timerUI = new TimerComponent(timer);
+        const timer = new Timer();
+        const timerUI = new TimerComponent(timer);
 
         function displayCurrentTime() {
             timerUI.displayTime(timer.getCurrentTime());
@@ -34,22 +34,21 @@
     }
 
     function setupNotes(evt) {
-        let isPureDocumentClicked = (evt.target === document.body);
+        const isPureDocumentClicked = evt.target === document.body;
 
         if (!isPureDocumentClicked) {
             return;
         }
 
-        let note = new NoteComponent({
+        const note = new NoteComponent({
             x: evt.pageX,
-            y: evt.pageY
+            y: evt.pageY,
         });
 
         MoveMasterConnector.applyMoving(note);
     }
 
-    global.addEventListener('DOMContentLoaded', setupClock);
-    global.addEventListener('hashchange', location.reload.bind(location));
-    global.addEventListener('dblclick', setupNotes);
-
+    global.addEventListener("DOMContentLoaded", setupClock);
+    global.addEventListener("hashchange", location.reload.bind(location));
+    global.addEventListener("dblclick", setupNotes);
 })(window);

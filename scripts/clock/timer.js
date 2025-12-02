@@ -1,5 +1,5 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
     const ONE_SECOND = 1000;
 
@@ -40,5 +40,4 @@
     }
 
     global.Timer = Timer;
-
 })(window);

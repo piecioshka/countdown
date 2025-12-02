@@ -1,5 +1,5 @@
 (function (global) {
-    'use strict';
+    "use strict";
 
     class EventList {
         constructor() {
@@ -11,10 +11,9 @@
         }
 
         trigger() {
-            this._list.forEach(fn => fn.call(null));
+            this._list.forEach((fn) => fn.call(null));
         }
     }
 
     global.EventList = EventList;
-
 })(window);
