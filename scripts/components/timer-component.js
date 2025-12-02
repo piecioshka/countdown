@@ -15,8 +15,8 @@
             return this.$element;
         }
 
-        displayTime(seconds) {
-            this.$element.innerText = Formatter.formatSecond(seconds);
+        displayTime(value) {
+            this.$element.innerHTML = value;
         }
     }
 

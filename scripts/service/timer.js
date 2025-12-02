@@ -10,7 +10,7 @@
             this.finishedQueue = new EventList();
 
             this._currentTime = 0;
-            const time = HashParser.parse() || ONE_MINUTE;
+            const time = HashParser.parse() * ONE_SECOND || ONE_MINUTE;
             this._limitTime = time;
 
             this._clock = setInterval(() => {

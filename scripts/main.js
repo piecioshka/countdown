@@ -2,7 +2,6 @@
     "use strict";
 
     const AudioPlayer = global.AudioPlayer;
-    const MoveMasterConnector = global.MoveMasterConnector;
     const Timer = global.Timer;
     const TimerComponent = global.TimerComponent;
     const NoteComponent = global.NoteComponent;
@@ -14,7 +13,13 @@
         const timerUI = new TimerComponent(timer);
 
         function displayCurrentTime() {
-            timerUI.displayTime(timer.getCurrentTime());
+            const time = timer.getCurrentTime();
+
+            const plainTime = Formatter.formatSecond(time);
+            document.title = plainTime;
+
+            const htmlTime = Formatter.formatSecond(time, "html");
+            timerUI.displayTime(htmlTime);
         }
 
         timer.finishedQueue.add(() => {
@@ -28,7 +33,7 @@
             displayCurrentTime();
         });
 
-        MoveMasterConnector.applyMoving(timerUI);
+        MoveMaster({ target: timerUI.getDOMElement() });
     }
 
     function setupNotes(evt) {
@@ -43,7 +48,7 @@
             y: evt.pageY,
         });
 
-        MoveMasterConnector.applyMoving(note);
+        MoveMaster({ target: note.getDOMElement() });
     }
 
     global.addEventListener("DOMContentLoaded", setupClock);
